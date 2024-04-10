@@ -16,6 +16,26 @@ The objective of this paper is to explore the effectiveness of using Pre-trained
 ### Additional Notes
 - SUPERB evaluates features across a wide range of tasks, providing a comprehensive assessment of SSL PTMs.
 
----
 
-This README.md provides a brief summary of Paper 1, focusing on the comparison of different model embeddings and their application in Speech Emotion Recognition tasks. For more detailed information, please refer to the original paper.
+x-vector: deep neural network (DNN) that processes speech segments to produce fixed-dimensional embeddings known as x-vectors. 
+
+ECAPA: It a robust speaker identification method,  It combines elements of Time-Delay Neural Networks (TDNNs) with attention mechanisms, allowing it to effectively model long-range dependencies in speech data. 
+
+Wav2Vec 2.0: SSL training for speech recognition. It employs a multi-layer convolutional neural network (CNN) for feature extraction followed by a Transformer-based architecture for context aggregation. 
+
+WavLM: WavLM is a waveform-based language model that directly operates on raw audio waveforms for tasks such as speech recognition. Architectures = CNNs and RNNs to model temporal dependencies in the audio signal.
+
+UniSpeech-SAT: Unified Speech Synthesis with Self-Attentive Tacotron is a method for speech synthesis model that combines elements of Tacotron and Transformer architectures. It leverages self-attention mechanisms to capture long-range dependencies in text and generates high-quality speech waveforms.
+    Tacotron: Tacotron is an end-to-end generative text-to-speech model that takes a character sequence as input and outputs the corresponding spectrogram.
+
+## paper 2: Heterogeneity over Homogeneity: Investigating Multilingual Speech Pre-Trained Models for Detecting Audio Deepfake
+
+They compared eight PTM's:
+
+1) For multilingual PTMs we choose, XLS-R (Babu et al., 2022), Whisper (Radford et al., 2023), and Massively Multilingual Speech
+2) For Monolingual PTMs (WavLM, Unispeech-SAT, Wav2vec2) based on the SUPERB.
+3) As speaker recognition PTM, they consider, x-vectorand as emotion recognition PTM, XLSR_emo.
+
+Objective: 
+1) Multilingual PTM are the best performers for ADD task.
+2) By combining representations from different PTMs as it has been seen in other speech processing tasks such as speech recognition that certain representations act as complementary to each other and we propose a framework, Merge into One (MiO) for the same.
