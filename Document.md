@@ -52,5 +52,6 @@ In Mio they follow the same modeling pattern for each incoming representation as
 BPD,
 D = pD,1 ⊗ qD,1 = pqT
 
-We Mio, they mixed multple PTMs. And in appendix they gave explain for there performance.
+## We Mio, 
+they mixed multple PTMs. And in appendix they gave explain for there performance.
 
