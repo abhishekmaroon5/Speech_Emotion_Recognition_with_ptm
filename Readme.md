@@ -16,4 +16,7 @@ https://mohitmayank.com/a_lazy_data_science_guide/audio_intelligence/wav2vec2/
 
 Section 1 to 3 (10 april):(Done)
 
-Section 4 to 6 (11 april):(Todo)
+Section 4 to 6 (11 april):(Done)
+
+
+Appendix 9.1 to 9,3 (12 april) (todo)

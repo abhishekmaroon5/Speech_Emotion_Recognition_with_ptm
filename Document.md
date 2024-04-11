@@ -36,6 +36,21 @@ They compared eight PTM's:
 2) For Monolingual PTMs (WavLM, Unispeech-SAT, Wav2vec2) based on the SUPERB.
 3) As speaker recognition PTM, they consider, x-vectorand as emotion recognition PTM, XLSR_emo.
 
-Objective: 
+## Objective: 
 1) Multilingual PTM are the best performers for ADD task.
 2) By combining representations from different PTMs as it has been seen in other speech processing tasks such as speech recognition that certain representations act as complementary to each other and we propose a framework, Merge into One (MiO) for the same.
+
+## ERR: 
+
+The Equal Error Rate (EER) is the point where the FAR and FRR are equal. In this example, let's say the FAR and FRR curves intersect at 3%, which means that at a particular decision threshold, both the FAR and FRR are 3%.
+
+## Modeling Approaches: 
+1(a): FCN, 1(b) CNN, 2(Mio) Fusion of MTPs.
+
+## Mio:
+In Mio they follow the same modeling pattern for each incoming representation as the second approach mentioned above. Then we apply linear projection to a dimension of size 120 followed by bilinear pooling (BP), which allows effective interaction between the features as shown by (Kumar and Nandakumar, 2022). BP is the outer product of two vectors p and q of dimen- sion (D,1) and (D,1) such that the resultant will be a matrix of dimension (D, D) and it is given as:
+BPD,
+D = pD,1 ⊗ qD,1 = pqT
+
+We Mio, they mixed multple PTMs. And in appendix they gave explain for there performance.
+
