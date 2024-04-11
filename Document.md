@@ -3,55 +3,49 @@
 ## Paper 1: Transforming the Embeddings: A Lightweight Technique for Speech Emotion Recognition Tasks
 
 ### Objective
-The objective of this paper is to explore the effectiveness of using Pre-trained Models (PTMs) initially trained for speaker recognition for Speech Emotion Recognition (SER) tasks. It argues that knowledge gained for speaker recognition, such as learning tone, pitch, etc., can be beneficial for SER.
+This paper aims to investigate the efficacy of repurposing Pre-trained Models (PTMs) originally designed for speaker recognition in Speech Emotion Recognition (SER) tasks. It posits that the insights gained from speaker recognition, such as nuances in tone and pitch, could enhance SER performance.
 
 ### Summary of Sections 2 and 3
-1. Comparison among five model embeddings: x-vector, ECAPA, wav2vec 2.0, wavLM, and Unispeech-SAT.
-2. All models are trained with a sampling rate of 16 kHz.
-3. The final hidden states are retrieved from wavLM, UniSpeech-SAT, and wav2vec 2.0, transformed into a 768-dimensional vector for each audio file, and utilized as input features for the downstream classifier using pooling average.
-4. Among SSL-based methods, wavLM and UniSpeech-SAT perform better than wav2vec 2.0.
+1. Comparative analysis of five model embeddings: x-vector, ECAPA, wav2vec 2.0, wavLM, and Unispeech-SAT.
+2. All models trained with a sampling rate of 16 kHz.
+3. Final hidden states extracted from wavLM, UniSpeech-SAT, and wav2vec 2.0, transformed into 768-dimensional vectors per audio file, serving as input features for downstream classifiers using average pooling.
+4. Among SSL-based methods, wavLM and UniSpeech-SAT outperform wav2vec 2.0.
 5. x-vector and ECAPA are supervised models, with ECAPA being a modified version of x-vector.
-6. Speech processing Universal PERformance Benchmark (SUPERB) is used for evaluating features from SSL PTMs (wav2vec 2.0, wavLM, Unispeech-SAT) across various tasks such as speaker identification, SER, speech recognition, voice separation, etc.
+6. Speech processing Universal PERformance Benchmark (SUPERB) employed to evaluate SSL PTM features across various tasks including speaker identification, SER, speech recognition, and voice separation.
 
 ### Additional Notes
-- SUPERB evaluates features across a wide range of tasks, providing a comprehensive assessment of SSL PTMs.
+- SUPERB offers a comprehensive evaluation of SSL PTM features across diverse tasks.
 
+#### Models:
+- **x-vector**: A DNN generating fixed-dimensional embeddings from speech segments.
+- **ECAPA**: A robust speaker identification method combining TDNNs with attention mechanisms.
+- **Wav2Vec 2.0**: SSL model for speech recognition utilizing CNNs and Transformer architecture.
+- **WavLM**: A waveform-based language model operating directly on raw audio for tasks like speech recognition, using CNNs and RNNs.
+- **UniSpeech-SAT**: A method for speech synthesis leveraging elements of Tacotron and Transformer architectures.
 
-x-vector: deep neural network (DNN) that processes speech segments to produce fixed-dimensional embeddings known as x-vectors. 
+## Paper 2: Heterogeneity over Homogeneity: Investigating Multilingual Speech Pre-Trained Models for Detecting Audio Deepfake
 
-ECAPA: It a robust speaker identification method,  It combines elements of Time-Delay Neural Networks (TDNNs) with attention mechanisms, allowing it to effectively model long-range dependencies in speech data. 
+This paper compares eight PTMs:
 
-Wav2Vec 2.0: SSL training for speech recognition. It employs a multi-layer convolutional neural network (CNN) for feature extraction followed by a Transformer-based architecture for context aggregation. 
+1) Multilingual PTMs: XLS-R, Whisper, and Massively Multilingual Speech
+2) Monolingual PTMs: WavLM, Unispeech-SAT, Wav2vec2 (based on SUPERB)
+3) Speaker recognition PTM: x-vector; Emotion recognition PTM: XLSR_emo.
 
-WavLM: WavLM is a waveform-based language model that directly operates on raw audio waveforms for tasks such as speech recognition. Architectures = CNNs and RNNs to model temporal dependencies in the audio signal.
+### Objective
+1) Multilingual PTMs excel in Audio Deepfake Detection (ADD) tasks.
+2) Proposing a framework, Merge into One (MiO), to combine representations from different PTMs, inspired by the complementarity observed in other speech processing tasks.
 
-UniSpeech-SAT: Unified Speech Synthesis with Self-Attentive Tacotron is a method for speech synthesis model that combines elements of Tacotron and Transformer architectures. It leverages self-attention mechanisms to capture long-range dependencies in text and generates high-quality speech waveforms.
-    Tacotron: Tacotron is an end-to-end generative text-to-speech model that takes a character sequence as input and outputs the corresponding spectrogram.
+### Equal Error Rate (EER)
+EER represents the point where False Acceptance Rate (FAR) equals False Rejection Rate (FRR).
 
-## paper 2: Heterogeneity over Homogeneity: Investigating Multilingual Speech Pre-Trained Models for Detecting Audio Deepfake
+### Modeling Approaches
+1(a): Fully Connected Network (FCN)
+1(b): Convolutional Neural Network (CNN)
+2: Merge into One (MiO) - Fusion of Multiple PTMs.
 
-They compared eight PTM's:
-
-1) For multilingual PTMs we choose, XLS-R (Babu et al., 2022), Whisper (Radford et al., 2023), and Massively Multilingual Speech
-2) For Monolingual PTMs (WavLM, Unispeech-SAT, Wav2vec2) based on the SUPERB.
-3) As speaker recognition PTM, they consider, x-vectorand as emotion recognition PTM, XLSR_emo.
-
-## Objective: 
-1) Multilingual PTM are the best performers for ADD task.
-2) By combining representations from different PTMs as it has been seen in other speech processing tasks such as speech recognition that certain representations act as complementary to each other and we propose a framework, Merge into One (MiO) for the same.
-
-## ERR: 
-
-The Equal Error Rate (EER) is the point where the FAR and FRR are equal. In this example, let's say the FAR and FRR curves intersect at 3%, which means that at a particular decision threshold, both the FAR and FRR are 3%.
-
-## Modeling Approaches: 
-1(a): FCN, 1(b) CNN, 2(Mio) Fusion of MTPs.
-
-## Mio:
-In Mio they follow the same modeling pattern for each incoming representation as the second approach mentioned above. Then we apply linear projection to a dimension of size 120 followed by bilinear pooling (BP), which allows effective interaction between the features as shown by (Kumar and Nandakumar, 2022). BP is the outer product of two vectors p and q of dimen- sion (D,1) and (D,1) such that the resultant will be a matrix of dimension (D, D) and it is given as:
+### MiO:
+MiO follows a consistent modeling pattern for each incoming representation, applying linear projection to a 120-dimensional space followed by bilinear pooling (BP) to facilitate effective feature interaction. BP involves the outer product of two vectors p and q of dimension (D,1), resulting in a matrix of dimension (D, D), represented as:
 BPD,
 D = pD,1 ⊗ qD,1 = pqT
 
-## We Mio, 
-they mixed multple PTMs. And in appendix they gave explain for there performance.
-
+In MiO, multiple PTMs are integrated, with performance explanations provided in the appendix.
