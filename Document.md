@@ -41,11 +41,11 @@ EER represents the point where False Acceptance Rate (FAR) equals False Rejectio
 ### Modeling Approaches
 1(a): Fully Connected Network (FCN)
 1(b): Convolutional Neural Network (CNN)
-![OpenAI Logo]( "OpenAI Logo")
+![OpenAI Logo](fig1a_and1b.png "OpenAI Logo")
 
 ### MiO:
 MiO follows a consistent modeling pattern for each incoming representation, applying linear projection to a 120-dimensional space followed by bilinear pooling (BP) to facilitate effective feature interaction. BP involves the outer product of two vectors p and q of dimension (D,1), resulting in a matrix of dimension (D, D), represented as:
 BPD,
 D = pD,1 ⊗ qD,1 = pqT
-
+![OpenAI Logo](fig2.png "OpenAI Logo")
 In MiO, multiple PTMs are integrated, with performance explanations provided in the appendix.
