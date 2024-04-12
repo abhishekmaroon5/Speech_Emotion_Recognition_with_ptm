@@ -49,3 +49,16 @@ BPD,
 D = pD,1 ⊗ qD,1 = pqT
 ![OpenAI Logo](fig2.png "OpenAI Logo")
 In MiO, multiple PTMs are integrated, with performance explanations provided in the appendix.
+
+Appendix:
+
+1) Dataset: 4 dataset, ASV, ITW and DC-C, DC-E
+
+2) Detailed Information of the Pre-Trained Models: XLS-R(1 billion parameters), Whisper(74 million), MMS(1 billion)[PTM's multiligual.] Unispeech-SAT(94 Million), WavLM(base(94 Million) and large(316 Million)), Wav2vec2(95 Million), X-vector(supervised)(4.2 Million), XLSR-emo.
+
+3) Cross-Corpus Evaluation:
+
+First Experiment(PTMs): Cross corpus experiment with 120 and 240 dimentions with PCA.[best is XLS-R]
+
+Second Experiment(MIO): Cross corpus experiment with 120 and 240 dimentions with PCA.[only two combinations(1.XLS-R + x-vector) (2.Whisper + Unispeech-SAT)]
+

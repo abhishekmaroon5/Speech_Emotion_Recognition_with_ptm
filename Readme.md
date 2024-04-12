@@ -18,5 +18,9 @@ Section 1 to 3 (10 april):(Done)
 
 Section 4 to 6 (11 april):(Done)
 
+Appendix 9.1 to 9,3 (12 april) (Done)
 
-Appendix 9.1 to 9,3 (12 april) (todo)
+5) Paper 3: Evaluating Unsupervised Dimensionality Reduction Methods for Pretrained Sentence Embeddings (todo)
+
+6) Code walkthrough for paper1 and paper2.(todo)
+
