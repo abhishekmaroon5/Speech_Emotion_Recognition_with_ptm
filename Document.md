@@ -62,3 +62,14 @@ First Experiment(PTMs): Cross corpus experiment with 120 and 240 dimentions with
 
 Second Experiment(MIO): Cross corpus experiment with 120 and 240 dimentions with PCA.[only two combinations(1.XLS-R + x-vector) (2.Whisper + Unispeech-SAT)]
 
+
+## Paper 3: Applying unsupervised Dimensionality Reduction techniques on Setence Embeddings 
+
+Issue: Memory and Compute intensive if there are higher dimensional embeddings 
+PLM's or PTM's have a very high dimension (1024 - 4096).
+
+Objective:  Reduce the dimensional of embeddingsApplying Unsurpervised DR techniques on the Embeddings given out by PTM's.
+
+Five dimensionality reduction methods:
+
+ SVD, PCA, GRP, KPCA and Autoencoders(Single-hiddle layer)
