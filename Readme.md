@@ -20,7 +20,19 @@ Section 4 to 6 (11 april):(Done)
 
 Appendix 9.1 to 9,3 (12 april) (Done)
 
-5) Paper 3: Evaluating Unsupervised Dimensionality Reduction Methods for Pretrained Sentence Embeddings (Section 4 and 5 todo)
+Understand the code for paper1, i.e the pipeline for CREMA-D evaluation dataset, and SER.(Done)
 
-6) Code walkthrough for paper1 and paper2.(todo)
+Plan ahead(23 April):
+
+1) Go through dimensionality reduction methods SVD, PCA, GRP, KPCA, LDA and Autoencoders(Single-hiddle layer)(TODO)
+
+2) Create environment for the pipeline.(TODO)
+
+3) We will go through pipeline and run it end-to-end on gpu. (TODO)
+
+4) Modify the pipeline for SER and use multiple PTM's((TODO)) from huggingface. (TODO)
+
+5) Apply dimensionality reduction methods learned above in the SER pipeline.(TODO)
+
+6) Code walkthrough for paper2.(TODO)
 
