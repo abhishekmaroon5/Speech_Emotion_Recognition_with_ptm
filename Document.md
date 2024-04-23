@@ -72,4 +72,42 @@ Objective:  Reduce the dimensional of embeddingsApplying Unsurpervised DR techni
 
 Five dimensionality reduction methods:
 
- SVD, PCA, GRP, KPCA and Autoencoders(Single-hiddle layer)
+ SVD, PCA, GRP, KPCA , LDA and Autoencoders(Single-hiddle layer)
+
+## Essence of Dimensionality Reduction:
+It’s not feasible to analyze each and every dimensions at a microscopic level in a high dimensional data. It might take us days or months to perform any meaningful analysis which requires lot of time, money and manpower in our business which is not often encouraged. Training a data with high dimensions will lead us problems like:
+
+Space required to store the data gets increased with increasing dimensions.
+## Less dimensions will take low time complexity in training a model.
+As dimensions increases, the possibility of overfitting the model also gets increased.
+we cannot visualize a high dimensional data. By dimensionality reduction we will reduce the data to 2D or 3D for better visualization.
+It will remove all the correlated features in our data.
+
+Components of Dimensionality Reduction:
+There are two major components of dimensionality reduction which will be discussed in detail here.
+
+I) Feature Selection:
+
+Feature selection involves in finding a subset of original data so that their will be minimum loss of information. It has following three strategies:
+
+Filter Strategy: Strategy to gain more information on the data.
+Wrapper Strategy: Basing on the model accuracy we will select features.
+Embedded Strategy: Basing on model prediction errors, we will take a decision whether to keep or remove the selected features.
+
+2) Feature Projection:
+
+Feature Projection also know as Feature Extraction is used to transform the data in high dimensional space to low dimensional space. The data transformation can be done in both linear and non linear.
+
+For linear transformation we have principal component analysis(PCA), Linear Discriminant Analysis(LDA)
+
+
+
+## PCA(Done)
+
+
+## LDA(todo)
+https://medium.com/analytics-vidhya/a-complete-guide-on-dimensionality-reduction-62d9698013d2
+
+
+## SVD(todo):
+https://medium.com/nerd-for-tech/dimensionality-reduction-techniques-pca-lca-and-svd-f2a56b097f7c#:~:text=SVD%20allows%20for%20dimensionality%20reduction,significant%20singular%20values%20and%20vectors.&text=SVD%20is%20used%20in%20data,storage%20requirements%20of%20a%20matrix.&text=By%20using%20only%20the%20most,of%20noise%20in%20the%20data.
