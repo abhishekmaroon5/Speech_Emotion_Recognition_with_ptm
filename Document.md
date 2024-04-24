@@ -58,9 +58,9 @@ Appendix:
 
 3) Cross-Corpus Evaluation:
 
-First Experiment(PTMs): Cross corpus experiment with 120 and 240 dimentions with PCA.[best is XLS-R]
+First Experiment(PTMs): Cross corpus experiment with 120 and 240 dimensions with PCA.[best is XLS-R]
 
-Second Experiment(MIO): Cross corpus experiment with 120 and 240 dimentions with PCA.[only two combinations(1.XLS-R + x-vector) (2.Whisper + Unispeech-SAT)]
+Second Experiment(MIO): Cross corpus experiment with 120 and 240 dimensions with PCA.[only two combinations(1.XLS-R + x-vector) (2.Whisper + Unispeech-SAT)]
 
 
 ## Paper 3: Applying unsupervised Dimensionality Reduction techniques on Setence Embeddings 
@@ -68,46 +68,100 @@ Second Experiment(MIO): Cross corpus experiment with 120 and 240 dimentions with
 Issue: Memory and Compute intensive if there are higher dimensional embeddings 
 PLM's or PTM's have a very high dimension (1024 - 4096).
 
-Objective:  Reduce the dimensional of embeddingsApplying Unsurpervised DR techniques on the Embeddings given out by PTM's.
+Objective:  Reduce the dimensional of embeddingsApplying Unsupervised DR techniques on the Embeddings given out by PTM's.
 
 Five dimensionality reduction methods:
 
- SVD, PCA, GRP, KPCA , LDA and Autoencoders(Single-hiddle layer)
+ SVD, PCA, GRP, KPCA , LDA and Autoencoders(Single-hidden layer)
 
 ## Essence of Dimensionality Reduction:
-It’s not feasible to analyze each and every dimensions at a microscopic level in a high dimensional data. It might take us days or months to perform any meaningful analysis which requires lot of time, money and manpower in our business which is not often encouraged. Training a data with high dimensions will lead us problems like:
+It’s not feasible to analyze each and every dimension at a microscopic level in high-dimensional data. It might take us days or months to perform any meaningful analysis which requires a lot of time, money, and manpower in our business, which is not often encouraged. Training data with high dimensions will lead to problems like:
 
-Space required to store the data gets increased with increasing dimensions.
-## Less dimensions will take low time complexity in training a model.
-As dimensions increases, the possibility of overfitting the model also gets increased.
-we cannot visualize a high dimensional data. By dimensionality reduction we will reduce the data to 2D or 3D for better visualization.
-It will remove all the correlated features in our data.
+- Space required to store the data gets increased with increasing dimensions.
+- Less dimensions will take low time complexity in training a model.
+- As dimensions increase, the possibility of overfitting the model also increases.
+- We cannot visualize high-dimensional data. By dimensionality reduction, we will reduce the data to 2D or 3D for better visualization.
+- It will remove all the correlated features in our data.
 
-Components of Dimensionality Reduction:
+### Components of Dimensionality Reduction:
 There are two major components of dimensionality reduction which will be discussed in detail here.
 
-I) Feature Selection:
+#### I) Feature Selection:
 
-Feature selection involves in finding a subset of original data so that their will be minimum loss of information. It has following three strategies:
+Feature selection involves finding a subset of original data so that there will be a minimum loss of information. It has the following three strategies:
 
-Filter Strategy: Strategy to gain more information on the data.
-Wrapper Strategy: Basing on the model accuracy we will select features.
-Embedded Strategy: Basing on model prediction errors, we will take a decision whether to keep or remove the selected features.
+- Filter Strategy: Strategy to gain more information on the data.
+- Wrapper Strategy: Basing on the model accuracy we will select features.
+- Embedded Strategy: Basing on model prediction errors, we will take a decision whether to keep or remove the selected features.
 
-2) Feature Projection:
+#### II) Feature Projection:
 
-Feature Projection also know as Feature Extraction is used to transform the data in high dimensional space to low dimensional space. The data transformation can be done in both linear and non linear.
+Feature Projection, also known as Feature Extraction, is used to transform the data in high-dimensional space to low-dimensional space. The data transformation can be done in both linear and non-linear ways.
 
-For linear transformation we have principal component analysis(PCA), Linear Discriminant Analysis(LDA)
+- For linear transformation, we have Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA).
 
+### PCA (Done)
+PCA is mostly used as a tool in exploratory data analysis (EDA) and for making predictive models. PCA can be done by eigenvalue decomposition of a data covariance (or correlation) matrix or singular value decomposition of a data matrix.
 
+#### Advantages:
+- It removes correlated features.
+- Improves model efficiency.
+- Reduces overfitting.
+- Improves Visualization.
 
-## PCA(Done)
+#### Disadvantages:
+- PCA is a linear algorithm and it won’t work very well for polynomial or other complex functions. We can somehow use kernel PCA for such data.
+- After PCA, we may lose a lot of information if we won’t choose the right number of dimensions to get eliminated.
+- Less interpretability
 
 
 ## LDA(todo)
-https://medium.com/analytics-vidhya/a-complete-guide-on-dimensionality-reduction-62d9698013d2
+PCA tries to find the components that maximizes the variance, while on the other hand LDA tries to find the new axes that:
 
+1) Maximizes the separability of the categories and
+![OpenAI Logo](lda_1.png "OpenAI Logo")
+2)  Minimizes the variance among categories.
+![OpenAI Logo](lda_2.png "OpenAI Logo")
+
+By minimizing the variance, we can well separate the clusters of individual groups. Hence it is as important as maximizing the mean values of groups.
+
+![OpenAI Logo](lda_3.png "OpenAI Logo")
+
+Comparision between PCA and LDA:
+
+To know the difference between the working of PCA and LDA, let’s look at the following plot. Where PCA tries to maximizes the variance unlike LDA which tries to maximizes the separability of three categories.
+
+![OpenAI Logo](lda_vs_pca.png "OpenAI Logo")
+
+We can see the difference between the both plots. In PCA, their is some overlapping in the data and it is difficult to find a line separating the two groups. LDA can help us to separate the three groups since their is less overlapping in the data.
 
 ## SVD(todo):
-https://medium.com/nerd-for-tech/dimensionality-reduction-techniques-pca-lca-and-svd-f2a56b097f7c#:~:text=SVD%20allows%20for%20dimensionality%20reduction,significant%20singular%20values%20and%20vectors.&text=SVD%20is%20used%20in%20data,storage%20requirements%20of%20a%20matrix.&text=By%20using%20only%20the%20most,of%20noise%20in%20the%20data.
+
+Singular Value Decomposition is a matrix factorization technique widely used in various applications, including linear algebra, signal processing, and machine learning. It decomposes a matrix into three other matrices, allowing for the representation of the original matrix in a reduced form.
+
+![OpenAI Logo](svd.png "OpenAI Logo")
+
+Comparision:
+Conclusion
+The choice between Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), and Singular Value Decomposition (SVD) depends on the specific objectives and characteristics of the data. Here are general guidelines on when to use each technique:
+
+1. PCA (Principal Component Analysis)
+
+Use Cases:
+1. When the goal is to reduce the dimensionality of the dataset.
+2. In scenarios where capturing global patterns and relationships within the data is crucial.
+3. For exploratory data analysis and visualization.
+
+2. LDA (Linear Discriminant Analysis)
+
+Use Cases:
+1. In classification problems where enhancing the separation between classes is important.
+2. When there is a labeled dataset, and the goal is to find a projection that maximizes class discrimination.
+3. LDA is particularly effective when the assumption of normally distributed classes and equal covariance matrices holds.
+
+3. SVD (Singular Value Decomposition)
+
+Use Cases:
+1. When dealing with sparse data or missing values.
+2. In collaborative filtering for recommendation systems.
+3. SVD is also applicable in data compression and denoising.
