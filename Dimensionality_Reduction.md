@@ -164,6 +164,24 @@ Approximate preservation of distances: While not exact, it aims to preserve the 
 Limitations:
 - Lack of interpretability: Unlike PCA, the new dimensions may not have clear interpretations.
 Loss of information: Similar to other dimensionality reduction techniques, there is a loss of information when projecting to a lower-dimensional space.
+
+## Truncated SVD
+🔍 **Eckart-Young Truncated Singular Value Decomposition (eYSVD)**
+
+Eckart-Young truncated singular value decomposition (eYSVD) is a truncated singular value decomposition (TSVD) algorithm that is used to approximate a matrix A by a product of a matrix U, a diagonal matrix Σ, and a matrix V, where U and V are orthogonal matrices. The algorithm is used to reduce the dimensionality of a matrix while preserving its important features. The truncation is done by selecting the k largest singular values and keeping only the corresponding columns of U and rows of V. The eYSVD algorithm is particularly useful when the matrix A is sparse or has a large number of singular values.
+
+💡 **Key Steps:**
+
+1. Compute the singular value decomposition A = U Σ V^T, where U and V are orthogonal matrices and Σ is a diagonal matrix containing the singular values of A.
+
+2. Truncate the singular values and corresponding columns of U and rows of V to retain only the k largest singular values.
+
+3. Form the truncated matrices U_k and V_k using the selected columns of U and rows of V.
+
+4. Compute the low-rank approximation of A as A_k = U_k Σ_k V_k^T, where Σ_k contains only the retained singular values on its diagonal.
+
+By selecting an appropriate value of k, eYSVD allows users to balance the trade-off between approximation accuracy and computational efficiency. This technique is particularly beneficial in scenarios where memory or computational resources are limited, or when dealing with large-scale datasets.
+
 - Comparison with PCA:
 PCA is based on finding the principal components that maximize variance, while GRP uses random projections.
 - PCA has an interpretation in terms of the original features, while GRP's new dimensions might not have such clear interpretations.
