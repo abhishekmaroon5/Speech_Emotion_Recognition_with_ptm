@@ -26,7 +26,7 @@ Plan ahead(23 April):
 
 1) Go through dimensionality reduction methods SVD, PCA, and LDA(Done)
 
- GRP, KPCA and Autoencoders(Single-hiddle layer)(TODO)
+ GRP, KPCA and Autoencoders(Single-hiddle layer)(Done)
 
 2) Create environment for the pipeline.(TODO)
 

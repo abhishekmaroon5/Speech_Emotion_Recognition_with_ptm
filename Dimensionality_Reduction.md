@@ -103,3 +103,68 @@ Use Cases:
 1. When dealing with sparse data or missing values.
 2. In collaborative filtering for recommendation systems.
 3. SVD is also applicable in data compression and denoising.
+
+
+KPCA:
+
+Kernel PCA (KPCA)
+- What is it?
+Kernel PCA is an extension of PCA that allows for nonlinear dimensionality reduction by using kernel functions.
+- How does it work?
+It first maps the input data into a higher-dimensional space using a kernel function (like Gaussian, polynomial, etc.).
+- In this higher-dimensional space, it then performs PCA.
+This allows KPCA to find nonlinear relationships in the data that PCA would miss.
+- Benefits:
+Can capture complex, nonlinear relationships in the data.
+Useful when linear methods like PCA may not be sufficient.
+
+
+Autoencoders (Single-hidden layer)
+- **What are they?**
+
+- Autoencoders are a type of neural network used for unsupervised learning, particularly for data compression and dimensionality reduction.
+- How do they work?
+
+- An autoencoder consists of an encoder and a decoder.
+The encoder compresses the input data into a lower-dimensional representation (the bottleneck layer).
+The decoder then tries to reconstruct the original input from this compressed representation.
+The model is trained to minimize the reconstruction error, which forces it to learn a compact representation of the data.
+- Single-hidden layer autoencoder:
+In this version, there's a single hidden layer between the encoder and decoder.
+The number of neurons in this hidden layer determines the dimensionality of the compressed representation.
+Training involves adjusting the weights to minimize the difference between input and output.
+- Benefits:
+Can learn complex patterns in data.
+Allows for nonlinear dimensionality reduction.
+Can handle high-dimensional data effectively.
+
+
+Comparison:
+- PCA is a linear method, while KPCA and Autoencoders (with nonlinear activation functions) can capture nonlinear relationships.
+- PCA is simple and interpretable but might not capture complex patterns.
+- KPCA extends PCA to capture nonlinear relationships using kernels.
+- Autoencoders are powerful for learning representations and can be used for nonlinear dimensionality reduction.
+
+Gaussian Random Projection (GRP)
+What is it?
+
+- Gaussian Random Projection (GRP) is a technique for dimensionality reduction that uses random matrices with elements drawn from a Gaussian distribution.
+- It's based on the Johnson-Lindenstrauss lemma, which states that a set of high-dimensional data points can be projected into a lower-dimensional space while approximately preserving pairwise distances between the points.
+
+How does it work?
+- GRP generates a random Gaussian matrix.
+Each element of this matrix is sampled independently from a Gaussian distribution.
+- The data is then multiplied by this random matrix to project it onto a lower-dimensional space.
+Despite being random, the projection is designed such that it approximately preserves the distances between the data points.
+
+Benefits:
+- Efficiency: It can be computationally faster than methods like PCA for very high-dimensional data.
+Approximate preservation of distances: While not exact, it aims to preserve the pairwise distances between points.
+- Simple: It's relatively straightforward to implement.
+Limitations:
+- Lack of interpretability: Unlike PCA, the new dimensions may not have clear interpretations.
+Loss of information: Similar to other dimensionality reduction techniques, there is a loss of information when projecting to a lower-dimensional space.
+- Comparison with PCA:
+PCA is based on finding the principal components that maximize variance, while GRP uses random projections.
+- PCA has an interpretation in terms of the original features, while GRP's new dimensions might not have such clear interpretations.
+- ¯GRP can be faster for very high-dimensional data, but PCA might be more accurate in preserving variance.
