@@ -105,7 +105,7 @@ Use Cases:
 3. SVD is also applicable in data compression and denoising.
 
 
-KPCA:
+## KPCA:
 
 Kernel PCA (KPCA)
 - What is it?
@@ -145,7 +145,7 @@ Comparison:
 - KPCA extends PCA to capture nonlinear relationships using kernels.
 - Autoencoders are powerful for learning representations and can be used for nonlinear dimensionality reduction.
 
-Gaussian Random Projection (GRP)
+## Gaussian Random Projection (GRP)
 What is it?
 
 - Gaussian Random Projection (GRP) is a technique for dimensionality reduction that uses random matrices with elements drawn from a Gaussian distribution.
