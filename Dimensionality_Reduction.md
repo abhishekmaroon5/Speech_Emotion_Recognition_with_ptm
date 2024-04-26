@@ -165,6 +165,11 @@ Limitations:
 - Lack of interpretability: Unlike PCA, the new dimensions may not have clear interpretations.
 Loss of information: Similar to other dimensionality reduction techniques, there is a loss of information when projecting to a lower-dimensional space.
 
+- Comparison with PCA:
+PCA is based on finding the principal components that maximize variance, while GRP uses random projections.
+- PCA has an interpretation in terms of the original features, while GRP's new dimensions might not have such clear interpretations.
+- ¯GRP can be faster for very high-dimensional data, but PCA might be more accurate in preserving variance.
+
 ## Truncated SVD
 🔍 **Eckart-Young Truncated Singular Value Decomposition (eYSVD)**
 
@@ -182,7 +187,3 @@ Eckart-Young truncated singular value decomposition (eYSVD) is a truncated singu
 
 By selecting an appropriate value of k, eYSVD allows users to balance the trade-off between approximation accuracy and computational efficiency. This technique is particularly beneficial in scenarios where memory or computational resources are limited, or when dealing with large-scale datasets.
 
-- Comparison with PCA:
-PCA is based on finding the principal components that maximize variance, while GRP uses random projections.
-- PCA has an interpretation in terms of the original features, while GRP's new dimensions might not have such clear interpretations.
-- ¯GRP can be faster for very high-dimensional data, but PCA might be more accurate in preserving variance.
