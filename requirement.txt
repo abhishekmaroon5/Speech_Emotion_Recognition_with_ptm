@@ -1,5 +1,6 @@
 torch 
 torchaudio
+torchvision
 tensorflow
 librosa
 seaborn
@@ -8,3 +9,5 @@ speechbrain
 transformers
 numpy
 scikit-learn
+speechbrain
+ipykernel

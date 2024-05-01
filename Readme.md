@@ -28,13 +28,24 @@ Plan ahead(23 April):
 
  GRP, KPCA and Autoencoders(Single-hiddle layer)(Done)
 
-2) Create environment for the pipeline.(TODO)
+2) Create environment for the pipeline.(Done)
 
-3) We will go through pipeline and run it end-to-end on gpu. (TODO)
+3) We will go through pipeline and run it end-to-end on gpu. (Done)
 
-4) Modify the pipeline for SER and use multiple PTM's((TODO)) from huggingface. (TODO)
+![OpenAI Logo](images/output_report.png "OpenAI Logo")
 
-5) Apply dimensionality reduction methods learned above in the SER pipeline.(TODO)
+4) Apply dimensionality reduction methods learned above in the SER pipeline.(TODO):
+
+4a) PCA, KPCA, SVD, LDA, GRP:
+
+Experiment 1(todo): Embedding size of 120.(Compare the result) with same model.
+
+Experiment 2(todo): Embedding size of 240.(Compare the result) with same model.
+
+
+5) Modify the pipeline for SER and use multiple PTM's((TODO)) from huggingface. (TODO)
+
+
 
 6) Code walkthrough for paper2.(TODO)
 

@@ -9,7 +9,10 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+speechbrain-develop/
 notebooks/
+AudioWAV/
+speechbrain/
 develop-eggs/
 dist/
 downloads/
