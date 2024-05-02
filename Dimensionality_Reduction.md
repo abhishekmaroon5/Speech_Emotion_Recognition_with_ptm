@@ -118,6 +118,8 @@ This allows KPCA to find nonlinear relationships in the data that PCA would miss
 Can capture complex, nonlinear relationships in the data.
 Useful when linear methods like PCA may not be sufficient.
 
+Most popular kernel function is RBF:
+https://towardsdatascience.com/radial-basis-function-rbf-kernel-the-go-to-kernel-acf0d22c798a
 
 Autoencoders (Single-hidden layer)
 - **What are they?**

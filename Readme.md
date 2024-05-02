@@ -38,14 +38,13 @@ Plan ahead(23 April):
 
 4a) PCA, KPCA, SVD, LDA, GRP:
 
-Experiment 1(todo): Embedding size of 120.(Compare the result) with same model.
+Experiment 1(Done): Embedding size of 120.(Compare the result) with same model.
 
-Experiment 2(todo): Embedding size of 240.(Compare the result) with same model.
+Experiment 2(Done): Embedding size of 240.(Compare the result) with same model.
 
+4b ) Add tsne plots to the tsne_plt and comparision of train time.(TODO)
 
 5) Modify the pipeline for SER and use multiple PTM's((TODO)) from huggingface. (TODO)
-
-
 
 6) Code walkthrough for paper2.(TODO)
 
