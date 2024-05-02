@@ -11,16 +11,16 @@ Later Todos:
 
 3) Learn more about the SUPERB benchmark.
 
-4) wav2vec 2.0 with huggingface transformers:
+4) wav2vec 2.0 with hugging face transformers:
 https://mohitmayank.com/a_lazy_data_science_guide/audio_intelligence/wav2vec2/
 
-Section 1 to 3 (10 april):(Done)
+Section 1 to 3 (10 April):(Done)
 
-Section 4 to 6 (11 april):(Done)
+Section 4 to 6 (11 April):(Done)
 
-Appendix 9.1 to 9,3 (12 april) (Done)
+Appendix 9.1 to 9,3 (12 April) (Done)
 
-Understand the code for paper1, i.e the pipeline for CREMA-D evaluation dataset, and SER.(Done)
+Understand the code for paper1, i.e. the pipeline for the CREMA-D evaluation dataset, and SER.(Done)
 
 Plan ahead(23 April):
 
@@ -28,23 +28,25 @@ Plan ahead(23 April):
 
  GRP, KPCA and Autoencoders(Single-hiddle layer)(Done)
 
-2) Create environment for the pipeline.(Done)
+2) Create an environment for the pipeline. (Done)
 
-3) We will go through pipeline and run it end-to-end on gpu. (Done)
+3) We will go through the pipeline and run it end-to-end on GPU. (Done)
 
 ![OpenAI Logo](images/output_report.png "OpenAI Logo")
 
-4) Apply dimensionality reduction methods learned above in the SER pipeline.(TODO):
+4) Apply dimensionality reduction methods learned above in the SER pipeline.(Done):
 
 4a) PCA, KPCA, SVD, LDA, GRP:
 
-Experiment 1(Done): Embedding size of 120.(Compare the result) with same model.
+Experiment 1(Done): Embedding size of 120. (Compare the result) with the same model.
 
-Experiment 2(Done): Embedding size of 240.(Compare the result) with same model.
+Experiment 2(Done): Embedding size of 240. (Compare the result) with the same model.
 
-4b ) Add tsne plots to the tsne_plt and comparision of train time.(TODO)
+**All results are updated in results_document.md document.**
 
-5) Modify the pipeline for SER and use multiple PTM's((TODO)) from huggingface. (TODO)
+4b ) Add TSNE plots to the tsne_plt and comparison of train time.(TODO)
 
-6) Code walkthrough for paper2.(TODO)
+5) Modify the pipeline for SER and use multiple PTMs ((TODO)) from huggingface. (TODO)
+
+6) Code walkthrough for paper 2.(TODO)
 
