@@ -13,7 +13,7 @@
 ![Result Chart](result_images/MLP_KPCA_240.png "Result Chart")
 
 ## KPCA with Dimentiality 120
-![Result Chart](result_images/MLP_KPCA_120.png "Result Chart")
+![Result Chart](result_images/MLP_KPCA_120.png "Result chart")
 
 ## SVD with Dimentiality 240
 ![Result Chart](result_images/MLP_SVD_240.png "Result Chart")
