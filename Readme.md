@@ -44,9 +44,18 @@ Experiment 2(Done): Embedding size of 240. (Compare the result) with the same mo
 
 **All results are updated in results_document.md document.**
 
+We have to do atleast with two more (Fully connected network or MLP and SVM an classical ML)....
+
 4b ) Add TSNE plots to the tsne_plt and comparison of train time.(TODO)
 
-5) Modify the pipeline for SER and use multiple PTMs ((TODO)) from huggingface. (TODO)
+5) a) MLP 240 (Done)
 
-6) Code walkthrough for paper 2.(TODO)
+MLP 120 (Done)
+
+
+ b) SVM(Todo)
+
+6) Modify the pipeline for SER and use multiple PTMs ((TODO)) from huggingface. (TODO)
+
+7) Code walkthrough for paper 2.(TODO)
 
