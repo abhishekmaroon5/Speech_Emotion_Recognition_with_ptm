@@ -19,13 +19,13 @@
 ![Result Chart](result_images/SVM_SVD_240.png "Result Chart")
 
 ## SVD with Dimentiality 120
-![Result Chart](result_images/SVM_SVD_240.png "Result Chart")
+![Result Chart](result_images/SVM_SVD_120.png "Result Chart")
 
 ## GRP with Dimentiality 240
-![Result Chart](result_images/SVM_GRP_240.pngg "Result Chart")
+![Result Chart](result_images/SVM_GRP_240.png "Result Chart")
 
 ## GRP with Dimentiality 120
-![Result Chart](result_images/SVM_GRP_240.png "Result Chart")
+![Result Chart](result_images/SVM_GRP_120.png "Result Chart")
 
 
 ## LDA with Dimentiality 5 (Exceptional CASE)
