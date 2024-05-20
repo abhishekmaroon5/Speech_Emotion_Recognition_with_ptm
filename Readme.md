@@ -50,7 +50,7 @@ We have to do atleast with two more (Fully connected network or MLP and SVM an c
 
 5) a) MLP 240 (Done)
 
-MLP 120 (Done)
+MLP 120 (Done))
 
 
  b) SVM(Todo)
