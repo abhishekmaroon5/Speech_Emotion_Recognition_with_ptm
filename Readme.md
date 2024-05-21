@@ -33,8 +33,6 @@
 
 3. Go through the pipeline and run it end-to-end on GPU.
 
-![OpenAI Logo](images/output_report.png "OpenAI Logo")
-
 4. Apply dimensionality reduction methods learned above in the SER pipeline:
    - PCA, KPCA, SVD, LDA, GRP.
 
