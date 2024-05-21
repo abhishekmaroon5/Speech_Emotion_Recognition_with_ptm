@@ -1,61 +1,57 @@
-# This File will contain schedule or upcoming todos:
+# Schedule and Upcoming Todos
 
-8-April-2024: Section 1 to 3.(Done):
-9-April-2024: Section 4 to 5.(Done)
+## Completed:
 
-Later Todos:
-1) Understand the architecture and code for x-vector, ECAPA, wav2vec 2.0, wavLM, and Unispeech-SAT.(Done)
+- **8-April-2024:** Section 1 to 3.
+- **9-April-2024:** Section 4 to 5.
 
-2) Try hugging face spaces and models(Done)
-    https://huggingface.co/spaces/ZionC27/Speech-Emotion-Recognition
+## Later Todos:
 
-3) Learn more about the SUPERB benchmark.
+1. Understand the architecture and code for x-vector, ECAPA, wav2vec 2.0, wavLM, and Unispeech-SAT.
 
-4) wav2vec 2.0 with hugging face transformers:
-https://mohitmayank.com/a_lazy_data_science_guide/audio_intelligence/wav2vec2/
+2. Try Hugging Face spaces and models:
+   - [Speech Emotion Recognition](https://huggingface.co/spaces/ZionC27/Speech-Emotion-Recognition)
 
-Section 1 to 3 (10 April):(Done)
+3. Learn more about the SUPERB benchmark.
 
-Section 4 to 6 (11 April):(Done)
+4. Understand wav2vec 2.0 with Hugging Face transformers:
+   [Wav2Vec2.0 Guide](https://mohitmayank.com/a_lazy_data_science_guide/audio_intelligence/wav2vec2/)
 
-Appendix 9.1 to 9,3 (12 April) (Done)
+5. **10 April:** Section 1 to 3.
+6. **11 April:** Section 4 to 6.
+7. **12 April:** Appendix 9.1 to 9.3.
 
-Understand the code for paper1, i.e. the pipeline for the CREMA-D evaluation dataset, and SER.(Done)
+8. Understand the code for paper1, i.e., the pipeline for the CREMA-D evaluation dataset, and SER.
 
-Plan ahead(23 April):
+## Planned Ahead (23 April):
 
-1) Go through dimensionality reduction methods SVD, PCA, and LDA(Done)
+1. Go through dimensionality reduction methods:
+   - SVD, PCA, and LDA.
+   - GRP, KPCA, and Autoencoders (Single-hidden layer).
 
- GRP, KPCA and Autoencoders(Single-hiddle layer)(Done)
+2. Create an environment for the pipeline.
 
-2) Create an environment for the pipeline. (Done)
-
-3) We will go through the pipeline and run it end-to-end on GPU. (Done)
+3. Go through the pipeline and run it end-to-end on GPU.
 
 ![OpenAI Logo](images/output_report.png "OpenAI Logo")
 
-4) Apply dimensionality reduction methods learned above in the SER pipeline.(Done):
+4. Apply dimensionality reduction methods learned above in the SER pipeline:
+   - PCA, KPCA, SVD, LDA, GRP.
 
-4a) PCA, KPCA, SVD, LDA, GRP:
+   **Experiments:**
+   - Embedding size of 120.
+   - Embedding size of 240.
 
-Experiment 1(Done): Embedding size of 120. (Compare the result) with the same model.
+   *All results are updated in* `results_document.md` *document.*
 
-Experiment 2(Done): Embedding size of 240. (Compare the result) with the same model.
+5. **MLP Experiments:**
+   - 240 Embedding size.
+   - 120 Embedding size.
 
-**All results are updated in results_document.md document.**
+   **SVM Experiment:**
 
-We have to do atleast with two more (Fully connected network or MLP and SVM an classical ML)....
+6. Experiment with random selection from embedding vector with sizes 384, 240, and 120.
 
-4b ) Add TSNE plots to the tsne_plt and comparison of train time.(TODO)
+7. Modify the pipeline for SER and use multiple PTMs from Hugging Face.
 
-5) a) MLP 240 (Done)
-
-MLP 120 (Done))
-
-
- b) SVM(Todo)
-
-6) Modify the pipeline for SER and use multiple PTMs ((TODO)) from huggingface. (TODO)
-
-7) Code walkthrough for paper 2.(TODO)
-
+8. Code walkthrough for paper 2.
