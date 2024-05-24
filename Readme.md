@@ -1,6 +1,6 @@
 # Schedule and Upcoming Todos
 
-## Planned Ahead (23 April):
+## Things Completed:
 
 1. Go through dimensionality reduction methods: (DONE)
    - SVD, PCA, and LDA.
@@ -32,3 +32,10 @@
 Modify the pipeline for SER and use multiple PTMs from Hugging Face. (TODO)
 
 Code walkthrough for paper 2. (TODO)
+
+# New Plan post 24 May: 
+
+1. Work on two new datasets for speech emotion recognization similar to CREMA-D.
+2. Work on comparision of diffused redundancy and dimensionality reduction on accuray.
+3. Create relavant graphs with embedding vector size varing from 10% to 100% with an interval of 10 and plot the accuracy.
+4. Repeat the above experiment three times.
