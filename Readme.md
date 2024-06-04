@@ -39,3 +39,24 @@ Code walkthrough for paper 2. (TODO)
 2. Work on comparision of diffused redundancy and dimensionality reduction on accuray.
 3. Create relavant graphs with embedding vector size varing from 10% to 100% with an interval of 10 and plot the accuracy.
 4. Repeat the above experiment three times.
+
+# New Plan post 30 May:
+
+1) Given two dataset from kaggle, using embedding extraction code we have extract the features.
+2) Using above features perform downstreaming task.
+3) Compare dim-reduction technique and diffused redundance present in the embedding.
+
+
+Dataset 1:
+https://www.kaggle.com/datasets/dejolilandry/asvpesdspeech-nonspeech-emotional-utterances
+
+
+Dataset 2:
+https://www.kaggle.com/datasets/johaangeorge/vivae-non-speech
+
+
+# Plan post 4 June:
+
+1) Using scripts for extracting embedding from 6 different PTM's (Xvector, Wav2Vec2, WavLM, Unispeechsat, whisper, MMS)
+2) Use above dataset for training, evaluation and testing using above embeddings.
+3) Apply dimensionality reduction on above embeddings and compare the result, also apply diffused redundancy and compare.
