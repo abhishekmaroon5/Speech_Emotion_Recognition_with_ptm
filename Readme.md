@@ -57,6 +57,7 @@ https://www.kaggle.com/datasets/johaangeorge/vivae-non-speech
 
 # Plan post 4 June:
 
-1) Using scripts for extracting embedding from 6 different PTM's (Xvector, Wav2Vec2, WavLM, Unispeechsat, whisper, MMS)
+1) Using scripts for extracting embedding from 6 different PTM's (Xvector, Wav2Vec2, WavLM, Unispeechsat, whisper, MMS) [Done]
+2) Create Pandas dataframe for above embeddings.
 2) Use above dataset for training, evaluation and testing using above embeddings.
 3) Apply dimensionality reduction on above embeddings and compare the result, also apply diffused redundancy and compare.

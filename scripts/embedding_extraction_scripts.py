@@ -10,7 +10,6 @@ wavtwovectwo = Wav2Vec2Model.from_pretrained("facebook/wav2vec2-base").to(device
 
 
 # audio file is decoded on the fly
-
 def extract_w2v2(path):
     sample_rate = 16000
     array, fs = torchaudio.load(path)
